@@ -29,12 +29,11 @@ public class Movie {
     @NotBlank(message = "Please provide movie's studio!")
     private String studio;
 
-    @Column(nullable = false)
-    @NotBlank(message = "Please provide movie's movie_cast")
+    @ElementCollection
+    @CollectionTable(name = "movie_cast")
     private Set<String> movieCast;
 
     @Column(nullable = false)
-    @NotBlank(message = "Please provide movie's release year!")
     private Integer releaseYear;
 
     @Column(nullable = false)

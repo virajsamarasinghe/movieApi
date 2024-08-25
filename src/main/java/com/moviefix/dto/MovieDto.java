@@ -1,7 +1,7 @@
 package com.moviefix.dto;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +11,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MovieDto {
+
 
     private Integer movieId;
 
@@ -30,7 +31,9 @@ public class MovieDto {
 
     private Set<String> movieCast;
 
+
     private Integer releaseYear;
+
 
 
     @NotBlank(message = "Please provide movie's poster!")
